@@ -3,223 +3,188 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>游欣娸 — 作品集</title>
+<title>游欣娸 — 2026 Portfolio</title>
 <meta name="description" content="游欣娸的字體設計、攝影與平面設計作品集">
-<meta property="og:title" content="游欣娸 — 作品集">
+<meta property="og:title" content="游欣娸 — 2026 Portfolio">
 <meta property="og:description" content="字體設計、攝影與平面設計作品集">
 <meta property="og:image" content="images/portrait.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #F4F5F7;
-    --card: #FFFFFF;
-    --ink: #1C2150;
-    --ink-soft: #4B5078;
-    --woo: #E4007F;
-    --sky: #3D88D6;
-    --gold: #EBB64E;
-    --mist: #DCE3EC;
-    --latin: "Syne", system-ui, sans-serif;
-    --han: "LXGW WenKai TC", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    --gutter: clamp(16px, 4vw, 56px);
+    --page: #FFFFFF;
+    --panel: #EDEDEB;
+    --ink: #1F1F1F;
+    --ink-soft: #555;
+    --mute: #9A9A96;
+    --rule: #CFCFCB;
+    --green: #2F5A3C;
+    --serif: "EB Garamond", "Noto Serif TC", "Songti TC", serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    --gutter: clamp(16px, 4vw, 48px);
+    --pad: clamp(24px, 5.5vw, 80px);
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
     margin: 0;
-    background: var(--paper);
+    background: var(--page);
     color: var(--ink);
-    font-family: var(--han);
-    font-size: 18px;
-    line-height: 1.75;
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.85;
     -webkit-font-smoothing: antialiased;
   }
   img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; }
-  :focus-visible { outline: 3px solid var(--woo); outline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+  p { margin: 0; }
+  ul { list-style: none; margin: 0; padding: 0; }
 
   /* ---------- top bar ---------- */
   .bar {
     position: sticky; top: 0; z-index: 10;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
     padding: 14px var(--gutter);
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(8px);
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em;
   }
-  .bar .mark { font-weight: 700; font-size: 19px; text-decoration: none; letter-spacing: 0.06em; }
-  .bar nav { display: flex; gap: clamp(14px, 3vw, 32px); }
-  .bar nav a { text-decoration: none; font-size: 16px; padding: 4px 0; border-bottom: 2px solid transparent; }
-  .bar nav a:hover { border-color: var(--woo); }
+  .bar .mark { text-decoration: none; font-family: var(--serif); font-size: 15px; letter-spacing: 0.3em; }
+  .bar nav { display: flex; gap: clamp(12px, 2.4vw, 28px); }
+  .bar nav a { text-decoration: none; color: var(--ink-soft); padding: 4px 0; }
+  .bar nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
-  /* ---------- hero ---------- */
-  .hero {
+  /* ---------- panels: each one reads like a page of a printed portfolio ---------- */
+  main { padding: clamp(8px, 2vw, 24px) var(--gutter) 0; }
+  .panel {
+    max-width: 1180px;
+    margin: 0 auto clamp(20px, 4vw, 56px);
+    background: var(--panel);
+    padding: var(--pad);
+  }
+
+  /* shared type */
+  .label { font-family: var(--sans); font-size: 13px; letter-spacing: 0.02em; margin: 0 0 6px; font-weight: 500; }
+  .tiny { font-family: var(--sans); font-size: 11.5px; color: var(--ink-soft); line-height: 1.7; }
+  .meta { font-size: 12.5px; color: var(--ink-soft); line-height: 1.7; }
+  .meta + .meta { margin-top: 2px; }
+
+  /* ---------- 1. cover ---------- */
+  .cover { padding-top: clamp(48px, 10vw, 120px); padding-bottom: clamp(56px, 12vw, 140px); }
+  .cover-inner { width: min(100%, 620px); margin: 0 auto; }
+  .cover-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: clamp(20px, 3.5vw, 36px); }
+  .cover-name { font-size: clamp(17px, 2vw, 21px); line-height: 1.35; letter-spacing: 0.32em; font-weight: 400; margin: 0; }
+  .cover-name span { display: block; font-size: 0.8em; letter-spacing: 0.04em; color: var(--ink-soft); }
+  .cover-year { text-align: left; font-size: clamp(13px, 1.4vw, 15px); line-height: 1.6; color: var(--ink-soft); margin-right: 8%; }
+  .cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 52%; }
+
+  /* ---------- 2. profile ---------- */
+  .profile {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    min-height: calc(100vh - 60px);
-    padding: 0 var(--gutter);
-    gap: clamp(24px, 4vw, 64px);
-    align-items: end;
+    grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: clamp(28px, 4.5vw, 64px);
   }
-  .hero-text { padding-bottom: clamp(32px, 7vh, 96px); }
-  .hero h1 {
-    margin: 0;
-    font-family: var(--han);
-    font-weight: 700;
-    font-size: clamp(76px, 14vw, 210px);
-    line-height: 1;
-    letter-spacing: 0.02em;
-    color: var(--woo);
-  }
-  .hero h1 .sub {
-    display: block;
-    font-family: var(--latin);
-    font-weight: 700;
-    font-size: clamp(20px, 2.2vw, 30px);
-    letter-spacing: -0.01em;
-    line-height: 1.2;
-    margin-top: 0.6em;
-    color: var(--ink);
-  }
-  .hero p { max-width: 30em; margin: 28px 0 0; font-size: 19px; color: var(--ink-soft); }
-  .hero p.school { margin-top: 32px; font-weight: 700; color: var(--ink); }
-  .hero p.school + p { margin-top: 6px; }
-  .hero-photo {
-    align-self: stretch;
-    background: var(--sky);
-    display: flex; align-items: flex-end; justify-content: center;
-    overflow: hidden;
-    margin-top: 24px;
-  }
-  .hero-photo img { width: 100%; height: 100%; max-height: calc(100vh - 84px); object-fit: cover; object-position: center 30%; }
-  .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; padding: 0; list-style: none; }
-  .tags a {
-    display: inline-block; text-decoration: none;
-    padding: 6px 16px; border-radius: 999px;
-    border: 1.5px solid var(--ink); font-size: 16px;
-  }
-  .tags a:hover { background: var(--ink); color: var(--paper); }
+  .who h2 { margin: 0 0 10px; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; }
+  .who h2 span { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 0.06em; margin-left: 14px; }
+  .who img { width: 100%; max-width: 170px; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 42%; }
+  .who .contact { margin-top: 12px; }
+  .who .contact a { text-decoration: none; }
+  .who .contact a:hover { text-decoration: underline; }
 
-  /* ---------- sections ---------- */
-  section.works { padding: clamp(72px, 12vh, 140px) var(--gutter); }
-  .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; margin-bottom: clamp(32px, 5vw, 56px); }
-  .head h2 { margin: 0; font-size: clamp(36px, 5vw, 56px); line-height: 1.1; font-weight: 700; letter-spacing: 0.04em; }
-  .head .en { font-family: var(--latin); font-weight: 500; font-size: clamp(18px, 2vw, 22px); color: var(--ink-soft); }
-  .head p { flex-basis: 100%; margin: 4px 0 0; color: var(--ink-soft); }
+  .block + .block { margin-top: clamp(22px, 3vw, 32px); }
+  .block .body { font-size: 13px; line-height: 1.85; color: var(--ink-soft); }
+  .dots li { font-family: var(--sans); font-size: 11.5px; color: var(--ink-soft); line-height: 2; }
+  .dots li::before { content: "·"; margin-right: 6px; }
+
+  .rows li { display: grid; grid-template-columns: 3.2em 1fr; gap: 14px; font-size: 12.5px; line-height: 1.6; padding: 4px 0; }
+  .rows li .k { font-family: var(--sans); font-size: 11px; color: var(--mute); padding-top: 1px; }
+  .rows li a { text-decoration: none; }
+  .rows li a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---------- section opener ---------- */
+  .chapter { text-align: right; color: var(--green); margin-bottom: clamp(28px, 4vw, 48px); }
+  .chapter h2 { margin: 0; font-size: clamp(20px, 2.4vw, 26px); font-weight: 500; letter-spacing: 0.14em; line-height: 1.3; }
+  .chapter p { font-size: clamp(18px, 2.2vw, 24px); line-height: 1.15; letter-spacing: 0.01em; }
+
+  /* ---------- project spreads ---------- */
+  .spread { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 2fr); gap: clamp(28px, 4.5vw, 64px); align-items: start; }
+  .spread.flip { grid-template-columns: minmax(0, 2fr) minmax(0, 0.9fr); }
+  .spread.flip .text { order: 2; text-align: right; }
+  .text h3 { margin: 0; font-size: clamp(17px, 1.8vw, 20px); font-weight: 500; letter-spacing: 0.14em; line-height: 1.4; }
+  .text .en { font-size: 13.5px; margin: 2px 0 2px; }
+  .text .from { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 18px; }
+  .text .desc { font-size: 12.5px; line-height: 1.95; color: var(--ink-soft); margin-top: 18px; text-align: justify; }
+  .spread.flip .text .desc { text-align: left; }
 
   figure { margin: 0; }
-  figcaption { margin-top: 12px; font-size: 16px; line-height: 1.5; }
-  figcaption small { display: block; color: var(--ink-soft); font-size: 14px; }
-
+  figcaption { font-family: var(--sans); font-size: 11px; color: var(--ink-soft); margin-top: 8px; line-height: 1.5; }
   button.zoom { all: unset; cursor: zoom-in; display: block; width: 100%; }
-  button.zoom:focus-visible { outline: 3px solid var(--woo); outline-offset: 4px; }
+  button.zoom:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
-  /* lettering: specimen wall */
-  .wall {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: clamp(12px, 1.6vw, 20px);
-  }
-  .tile .pad {
-    background: var(--card);
-    display: grid; place-items: center;
-    padding: clamp(24px, 4vw, 56px);
-    aspect-ratio: var(--ratio, 4 / 3);
-  }
-  .tile .pad img { max-height: 100%; width: auto; max-width: 100%; object-fit: contain; justify-self: center; }
-  .tile.woo { grid-column: span 4; --ratio: 16 / 9; }
-  .tile.woo .pad { background: #FBE3EF; }
-  .tile.love { grid-column: span 2; display: flex; flex-direction: column; }
-  .tile.love button.zoom { flex: 1; display: flex; min-width: 0; }
-  .tile .pad { min-width: 0; grid-template-columns: minmax(0, 1fr); }
-  .tile.love .pad { flex: 1; aspect-ratio: auto; background: #FBF1DC; }
-  .tile.weeds { grid-column: span 3; }
-  .tile.nobody { grid-column: span 3; }
-  .tile.nobody .pad { background: #FFF7CC; }
+  /* lettering grid: mounted on white like prints */
+  .letters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.8vw, 20px); }
+  .letters .mount { background: #FFF; aspect-ratio: 4 / 3; position: relative; }
+  .letters .mount img { position: absolute; inset: 11%; width: 78%; height: 78%; object-fit: contain; }
 
-  /* photography: film strip */
-  .strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(12px, 1.6vw, 20px);
-    align-items: start;
-  }
-  .strip figure:nth-child(2) { margin-top: clamp(40px, 8vw, 120px); }
-  .strip img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  /* photos: three in a row */
+  .photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 16px); }
+  .photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 
-  /* design: dark wall */
-  section.design { background: var(--ink); color: var(--paper); }
-  section.design .head .en, section.design .head p, section.design figcaption small { color: #B8BDE0; }
-  .posters {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: clamp(16px, 2.4vw, 32px);
-    align-items: end;
-  }
+  /* posters */
+  .posters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.8vw, 20px); align-items: end; }
   .posters img { width: 100%; aspect-ratio: 7 / 10; object-fit: cover; }
+  .single { max-width: 360px; }
+  .single img { width: 100%; aspect-ratio: 7 / 10; object-fit: cover; }
 
-  /* footer */
-  footer {
-    padding: clamp(72px, 12vh, 140px) var(--gutter) 40px;
-    display: grid; gap: 32px;
-  }
-  footer h2 {
-    margin: 0;
-    font-family: var(--latin); font-weight: 800;
-    font-size: clamp(44px, 9vw, 128px); line-height: 0.95; letter-spacing: -0.04em;
-    color: var(--woo);
-  }
-  footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 19px; }
-  footer ul a { text-decoration-color: var(--woo); text-underline-offset: 5px; text-decoration-thickness: 2px; }
-  footer .fine { font-size: 14px; color: var(--ink-soft); }
+  /* ---------- end page ---------- */
+  .end { text-align: center; padding-top: clamp(56px, 10vw, 120px); padding-bottom: clamp(56px, 10vw, 120px); }
+  .end h2 { margin: 0; font-size: clamp(20px, 2.6vw, 28px); font-weight: 400; letter-spacing: 0.4em; }
+  .end .en { font-style: italic; color: var(--ink-soft); margin: 4px 0 28px; font-size: 16px; }
+  .end ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 28px; font-family: var(--sans); font-size: 12.5px; }
+  .end ul a { text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+  .end ul a:hover { border-color: var(--ink); }
+  footer { text-align: center; padding: 8px var(--gutter) 40px; }
 
   /* lightbox */
-  dialog {
-    border: 0; padding: 0; background: transparent;
-    max-width: 94vw; max-height: 94vh;
-  }
-  dialog::backdrop { background: rgba(28, 33, 80, 0.92); }
-  dialog img { max-width: 94vw; max-height: 86vh; width: auto; margin: 0 auto; }
-  dialog .cap { color: var(--paper); text-align: center; margin-top: 12px; font-size: 16px; }
+  dialog { border: 0; padding: 0; background: transparent; max-width: 94vw; max-height: 94vh; }
+  dialog::backdrop { background: rgba(237, 237, 235, 0.97); }
+  dialog img { max-width: 94vw; max-height: 84vh; width: auto; margin: 0 auto; }
+  dialog .cap { text-align: center; margin-top: 12px; font-size: 13px; color: var(--ink-soft); }
   dialog .close {
     position: fixed; top: 16px; right: 16px;
-    font: 700 16px var(--han); color: var(--ink); background: var(--paper);
-    border: 0; border-radius: 999px; padding: 8px 18px; cursor: pointer;
+    font: 12px var(--sans); letter-spacing: 0.08em; color: var(--ink); background: transparent;
+    border: 1px solid var(--ink); border-radius: 999px; padding: 6px 16px; cursor: pointer;
   }
-  dialog[open] { animation: pop .22s ease-out; }
-  @keyframes pop { from { opacity: 0; transform: scale(.97); } }
+  dialog[open] { animation: fade .25s ease-out; }
+  @keyframes fade { from { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) { dialog[open] { animation: none; } }
 
   /* ---------- responsive ---------- */
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; min-height: 0; align-items: start; }
-    .hero-text { padding-top: 24px; padding-bottom: 0; order: 2; }
-    .hero-photo { order: 1; margin-top: 8px; aspect-ratio: 4 / 5; }
-    .hero-photo img { max-height: none; }
-    .wall { grid-template-columns: 1fr 1fr; }
-    .tile.woo, .tile.weeds, .tile.nobody { grid-column: span 2; }
-    .tile.love { grid-column: span 2; }
-    .tile.love .pad { aspect-ratio: 4 / 3; }
-    .strip { grid-template-columns: 1fr 1fr; }
-    .strip figure:nth-child(2) { margin-top: 48px; }
-    .strip figure:nth-child(3) { grid-column: span 2; }
-    .strip figure:nth-child(3) img { aspect-ratio: 5 / 4; }
-    .posters { grid-template-columns: 1fr 1fr; }
-    .posters figure:first-child { grid-column: span 2; }
+    .profile { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); }
+    .profile .col-c { grid-column: 1 / -1; }
+    .spread, .spread.flip { grid-template-columns: 1fr; }
+    .spread.flip .text { order: 0; text-align: left; }
   }
   @media (max-width: 560px) {
-    body { font-size: 17px; }
-    .bar nav a { font-size: 15px; }
+    main { padding-left: 0; padding-right: 0; }
+    .panel { padding: 28px 18px; }
+    .cover { padding-top: 44px; padding-bottom: 52px; }
+    .cover-year { margin-right: 0; }
     .bar .mark { display: none; }
     .bar { justify-content: center; }
-    .strip { grid-template-columns: 1fr; }
-    .strip figure:nth-child(2) { margin-top: 0; }
-    .strip figure:nth-child(3) { grid-column: auto; }
-    .strip figure:nth-child(3) img { aspect-ratio: 4 / 5; }
-    .posters { grid-template-columns: 1fr; }
-    .posters figure:first-child { grid-column: auto; }
+    .profile { grid-template-columns: 1fr; }
+    .who { display: grid; grid-template-columns: 120px 1fr; gap: 0 16px; align-items: end; }
+    .who h2 { grid-column: 1 / -1; }
+    .who .contact { margin-top: 0; }
+    .block .body, .text .desc { font-size: 13.5px; }
+    .photos { grid-template-columns: 1fr 1fr; }
+    .photos figure:first-child { grid-column: 1 / -1; }
+    .photos figure:first-child img { aspect-ratio: 5 / 4; }
+    .letters { gap: 10px; }
   }
 </style>
 </head>
@@ -227,7 +192,8 @@
 
 <header class="bar">
   <a class="mark" href="#top">游欣娸</a>
-  <nav aria-label="作品分類">
+  <nav aria-label="目錄">
+    <a href="#about">自我介紹</a>
     <a href="#lettering">字體</a>
     <a href="#photo">攝影</a>
     <a href="#design">設計</a>
@@ -236,102 +202,192 @@
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="hero-text">
-      <h1>游欣娸<span class="sub">Lettering, photography and graphic design</span></h1>
-      <p class="school">南臺科技大學視覺傳達設計系商業設計組</p>
-      <p>專注於視覺傳達、平面設計與前端介面實作，熱衷於透過多層次視覺語彙與乾淨流暢的排版，探索設計與數位互動的更多可能。</p>
-      <ul class="tags">
-        <li><a href="#lettering">字體作品</a></li>
-        <li><a href="#photo">攝影作品</a></li>
-        <li><a href="#design">設計作品</a></li>
-      </ul>
-    </div>
-    <div class="hero-photo">
-      <img src="images/portrait.jpg" alt="游欣娸的大頭照" width="900" height="1599">
+
+  <!-- 封面 -->
+  <section class="panel cover" aria-label="封面">
+    <div class="cover-inner">
+      <div class="cover-head">
+        <h1 class="cover-name">游 欣 娸<span>Yu Hsin-Chi</span></h1>
+        <p class="cover-year">2026<br>Portfolio</p>
+      </div>
+      <img src="images/design-woo-talk-poster-a.jpg" alt="臺灣woo語 活動海報：三隻穿紅色高跟鞋的貓插畫" width="1665" height="2360">
     </div>
   </section>
 
-  <section class="works" id="lettering" aria-labelledby="h-lettering">
-    <div class="head">
-      <h2 id="h-lettering">字體作品</h2>
-      <span class="en">Lettering</span>
-      <p>手繪與數位字體設計，從中英文標準字到情緒化的標語字。</p>
+  <!-- 自我介紹 -->
+  <section class="panel profile" id="about" aria-label="自我介紹">
+    <div class="who">
+      <h2>游欣娸<span>YU HSIN-CHI</span></h2>
+      <img src="images/portrait.jpg" alt="游欣娸的大頭照" width="960" height="1706">
+      <div class="contact tiny">
+        <p><a href="mailto:a0960535300@gmail.com">a0960535300@gmail.com</a></p>
+        <p><a href="https://www.instagram.com/__nix.o8/" target="_blank" rel="noopener">IG @__nix.o8</a></p>
+      </div>
     </div>
-    <div class="wall">
-      <figure class="tile woo">
-        <button class="zoom" type="button"><div class="pad"><img src="images/lettering-woo-talk.png" alt="Taiwanese Woo Talk 流體造型英文字" loading="lazy"></div></button>
-        <figcaption>Taiwanese Woo Talk<small>臺灣woo語 活動標準字</small></figcaption>
-      </figure>
-      <figure class="tile love">
-        <button class="zoom" type="button"><div class="pad"><img src="images/lettering-love-letter.png" alt="Love Letter 金色襯線與草寫混排字" loading="lazy"></div></button>
-        <figcaption>Love Letter<small>襯線 × 草寫</small></figcaption>
-      </figure>
-      <figure class="tile weeds">
-        <button class="zoom" type="button"><div class="pad"><img src="images/lettering-easy-weeds.png" alt="Easy Weeds 溫室雜草 中英文標準字" loading="lazy"></div></button>
-        <figcaption>Easy Weeds 溫室雜草<small>中英文標準字</small></figcaption>
-      </figure>
-      <figure class="tile nobody">
-        <button class="zoom" type="button"><div class="pad"><img src="images/lettering-nobody-cares.png" alt="手寫標語字：沒有人在乎你在乎的事" loading="lazy"></div></button>
-        <figcaption>沒有人在乎你在乎的事<small>手寫標語字</small></figcaption>
-      </figure>
+
+    <div class="col-b">
+      <div class="block">
+        <p class="label">About</p>
+        <p class="body">專注於視覺傳達、平面設計與前端介面實作，熱衷於透過多層次視覺語彙與乾淨流暢的排版，探索設計與數位互動的更多可能。</p>
+      </div>
+      <div class="block">
+        <p class="label">Interested In</p>
+        <p class="tiny">Lettering, Graphic Design,<br>Photography, Front-end Interface</p>
+      </div>
+      <div class="block">
+        <p class="label">Softwares</p>
+        <!-- 改成你實際會用的軟體 -->
+        <ul class="dots">
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>InDesign</li>
+          <li>Figma</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-c">
+      <div class="block">
+        <p class="label">Education</p>
+        <ul class="rows">
+          <li><span class="k">大學</span><span>南臺科技大學 視覺傳達設計系 商業設計組</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <p class="label">Selected Works</p>
+        <ul class="rows">
+          <li><span class="k">字體</span><a href="#lettering">臺灣woo語《Taiwanese Woo Talk》活動標準字</a></li>
+          <li><span class="k">字體</span><a href="#lettering">《Love Letter》襯線 × 草寫混排字</a></li>
+          <li><span class="k">字體</span><a href="#lettering">《Easy Weeds 溫室雜草》中英文標準字</a></li>
+          <li><span class="k">字體</span><a href="#lettering">「沒有人在乎你在乎的事」手寫標語字</a></li>
+          <li><span class="k">攝影</span><a href="#photo">校園人像系列《樹蔭隧道》《石牆》《午後》</a></li>
+          <li><span class="k">設計</span><a href="#design">旺旺莎娃酒冰 廣告海報《吃「冰」，也會嗨。》</a></li>
+          <li><span class="k">設計</span><a href="#woo">臺灣woo語 活動海報・插畫 A／B</a></li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="works" id="photo" aria-labelledby="h-photo">
-    <div class="head">
-      <h2 id="h-photo">攝影作品</h2>
-      <span class="en">Photography</span>
-      <p>校園人像系列。夏天的制服、樹影和午後的光。</p>
+  <!-- 字體作品 -->
+  <section class="panel" id="lettering" aria-labelledby="h-lettering">
+    <div class="chapter">
+      <h2 id="h-lettering">一、字體作品</h2>
+      <p>Lettering</p>
     </div>
-    <div class="strip">
-      <figure>
-        <button class="zoom" type="button"><img src="images/photo-tree-tunnel.jpg" alt="穿制服的女生站在綠色樹蔭隧道下回頭" loading="lazy" width="828" height="1034"></button>
-        <figcaption>樹蔭隧道</figcaption>
-      </figure>
-      <figure>
-        <button class="zoom" type="button"><img src="images/photo-ledge.jpg" alt="穿制服的女生坐在石牆上望向一旁" loading="lazy" width="828" height="1036"></button>
-        <figcaption>石牆</figcaption>
-      </figure>
-      <figure>
-        <button class="zoom" type="button"><img src="images/photo-afternoon.jpg" alt="穿制服的女生坐在欄杆上，抬頭望向樹梢" loading="lazy" width="828" height="1035"></button>
-        <figcaption>午後</figcaption>
-      </figure>
+    <div class="spread">
+      <div class="text">
+        <h3>字體設計</h3>
+        <p class="en">Lettering &amp; Logotype</p>
+        <p class="from">—— 標準字・標語字</p>
+        <p class="meta">手繪／數位</p>
+        <p class="desc">手繪與數位字體設計，從中英文標準字到情緒化的標語字。</p>
+      </div>
+      <div class="letters">
+        <figure>
+          <button class="zoom" type="button"><div class="mount"><img src="images/lettering-woo-talk.png" alt="Taiwanese Woo Talk 流體造型英文字" loading="lazy" width="698" height="295"></div></button>
+          <figcaption>Taiwanese Woo Talk｜臺灣woo語 活動標準字</figcaption>
+        </figure>
+        <figure>
+          <button class="zoom" type="button"><div class="mount"><img src="images/lettering-love-letter.png" alt="Love Letter 金色襯線與草寫混排字" loading="lazy" width="639" height="480"></div></button>
+          <figcaption>Love Letter｜襯線 × 草寫</figcaption>
+        </figure>
+        <figure>
+          <button class="zoom" type="button"><div class="mount"><img src="images/lettering-easy-weeds.png" alt="Easy Weeds 溫室雜草 中英文標準字" loading="lazy" width="1130" height="642"></div></button>
+          <figcaption>Easy Weeds 溫室雜草｜中英文標準字</figcaption>
+        </figure>
+        <figure>
+          <button class="zoom" type="button"><div class="mount"><img src="images/lettering-nobody-cares.png" alt="手寫標語字：沒有人在乎你在乎的事" loading="lazy" width="1400" height="908"></div></button>
+          <figcaption>沒有人在乎你在乎的事｜手寫標語字</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
-  <section class="works design" id="design" aria-labelledby="h-design">
-    <div class="head">
-      <h2 id="h-design">設計作品</h2>
-      <span class="en">Graphic design</span>
-      <p>海報與廣告設計，包含插畫、字體與攝影的整合。</p>
+  <!-- 攝影作品 -->
+  <section class="panel" id="photo" aria-labelledby="h-photo">
+    <div class="chapter">
+      <h2 id="h-photo">二、攝影作品</h2>
+      <p>Photography</p>
     </div>
-    <div class="posters">
-      <figure>
+    <div class="spread">
+      <div class="text">
+        <h3>校園人像</h3>
+        <p class="en">Campus Portraits</p>
+        <p class="from">—— 人像攝影系列</p>
+        <p class="desc">夏天的制服、樹影和午後的光。</p>
+      </div>
+      <div class="photos">
+        <figure>
+          <button class="zoom" type="button"><img src="images/photo-tree-tunnel.jpg" alt="穿制服的女生站在綠色樹蔭隧道下回頭" loading="lazy" width="828" height="1034"></button>
+          <figcaption>樹蔭隧道</figcaption>
+        </figure>
+        <figure>
+          <button class="zoom" type="button"><img src="images/photo-ledge.jpg" alt="穿制服的女生坐在石牆上望向一旁" loading="lazy" width="828" height="1036"></button>
+          <figcaption>石牆</figcaption>
+        </figure>
+        <figure>
+          <button class="zoom" type="button"><img src="images/photo-afternoon.jpg" alt="穿制服的女生坐在欄杆上，抬頭望向樹梢" loading="lazy" width="828" height="1035"></button>
+          <figcaption>午後</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 設計作品 -->
+  <section class="panel" id="design" aria-labelledby="h-design">
+    <div class="chapter">
+      <h2 id="h-design">三、設計作品</h2>
+      <p>Graphic Design</p>
+    </div>
+    <div class="spread">
+      <div class="text">
+        <h3>吃「冰」，也會嗨。</h3>
+        <p class="en">Sawow Ice Pop Advertising</p>
+        <p class="from">—— 旺旺莎娃酒冰 廣告海報</p>
+        <p class="desc">海報與廣告設計，整合插畫、字體與攝影。</p>
+      </div>
+      <figure class="single">
         <button class="zoom" type="button"><img src="images/design-sawow-ad.jpg" alt="莎娃酒冰廣告海報：一群朋友夜晚在街頭拿著酒冰，標語「吃冰，也會嗨。」" loading="lazy" width="1155" height="1651"></button>
-        <figcaption>吃「冰」，也會嗨。<small>旺旺莎娃酒冰 廣告海報</small></figcaption>
-      </figure>
-      <figure>
-        <button class="zoom" type="button"><img src="images/design-woo-talk-poster-a.jpg" alt="臺灣woo語 活動海報：三隻穿紅色高跟鞋的貓插畫" loading="lazy" width="1400" height="1984"></button>
-        <figcaption>臺灣woo語 A<small>活動海報・插畫</small></figcaption>
-      </figure>
-      <figure>
-        <button class="zoom" type="button"><img src="images/design-woo-talk-poster-b.jpg" alt="臺灣woo語 活動海報：貓、鹿與青蛙角色自拍插畫" loading="lazy" width="747" height="1024"></button>
-        <figcaption>臺灣woo語 B<small>活動海報・插畫</small></figcaption>
+        <figcaption>廣告海報</figcaption>
       </figure>
     </div>
+  </section>
+
+  <section class="panel" id="woo" aria-labelledby="h-woo">
+    <div class="spread flip">
+      <div class="text">
+        <h3 id="h-woo">臺灣woo語</h3>
+        <p class="en">Taiwanese Woo Talk</p>
+        <p class="from">—— 活動海報・插畫・標準字</p>
+        <p class="desc">為「臺灣woo語」活動設計的標準字與兩款主視覺海報。</p>
+      </div>
+      <div class="posters">
+        <figure>
+          <button class="zoom" type="button"><img src="images/design-woo-talk-poster-a.jpg" alt="臺灣woo語 活動海報：三隻穿紅色高跟鞋的貓插畫" loading="lazy" width="1665" height="2360"></button>
+          <figcaption>海報 A</figcaption>
+        </figure>
+        <figure>
+          <button class="zoom" type="button"><img src="images/design-woo-talk-poster-b.jpg" alt="臺灣woo語 活動海報：貓、鹿與青蛙角色自拍插畫" loading="lazy" width="747" height="1024"></button>
+          <figcaption>海報 B</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡 -->
+  <section class="panel end" id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">謝謝觀看</h2>
+    <p class="en">Thank you for watching</p>
+    <ul>
+      <li><a href="mailto:a0960535300@gmail.com">a0960535300@gmail.com</a></li>
+      <li><a href="https://www.instagram.com/__nix.o8/" target="_blank" rel="noopener">Instagram @__nix.o8</a></li>
+      <li><a href="https://github.com/a0960535300-ai" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
   </section>
 </main>
 
-<footer id="contact">
-  <h2>Say hi.</h2>
-  <ul>
-    <li><a href="mailto:a0960535300@gmail.com">a0960535300@gmail.com</a></li>
-    <li><a href="https://www.instagram.com/__nix.o8/" target="_blank" rel="noopener">Instagram @__nix.o8</a></li>
-    <li><a href="https://github.com/a0960535300-ai" target="_blank" rel="noopener">GitHub</a></li>
-  </ul>
-  <p class="fine">© 2026 游欣娸. 所有作品版權屬於作者。</p>
-</footer>
+<footer class="tiny">© 2026 游欣娸. 所有作品版權屬於作者。</footer>
 
 <dialog id="lightbox" aria-label="作品大圖">
   <button class="close" type="button">關閉</button>
@@ -349,7 +405,7 @@
       const img = btn.querySelector('img');
       const fc = btn.closest('figure').querySelector('figcaption');
       big.src = img.src; big.alt = img.alt;
-      cap.textContent = fc ? fc.firstChild.textContent.trim() : '';
+      cap.textContent = fc ? fc.textContent.trim() : '';
       box.showModal();
     });
   });
